@@ -1,0 +1,126 @@
+:root {
+  color-scheme: only light;
+  /* 
+  --global_padding_content = (ширина документа - ширина контентной части С УЧЁТОМ ОТСТУПОВ) / 2. 
+  Устанавливает контентную часть документа посередине с помощью padding, оставляя отступ по краям документа.
+  */
+  --global_padding_content: calc((100% - 1520px) / 2);
+
+  /* 
+  --global_padding = (ширина документа - ширина контентной части БЕЗ УЧЁТА ОТСТУПОВ) / 2. 
+  Устанавливает контентную часть документа посередине с помощью padding, не оставляя отступ по краям документа.
+  */
+  --global_padding: calc((100% - 1920px) / 2);
+
+
+  --offset_chapter: 150px; /* 150px/100px/50px */
+  --offset_chapter_sub: 150px; /* 150px/120px/100px */
+
+  --header_height: 75px; /* 75px/64px/56px */
+
+
+  --font_size_rule_1: 50px; /* 50px/40px/32px */
+  --font_size_rule_2: 75px; /* 75px/60px/48px */
+  --font_size_rule_3: 20px; /* 20px/20px/14px */
+  --font_size_rule_4: 14px; /* 14px/16px/14px */
+  --font_size_rule_5: 14px; /* 14px/14px/12px */
+  --font_size_rule_6: 18px; /* 18px/18px/14px */
+  --font_size_rule_7: 18px; /* 18px/14px/14px */
+  --font_size_rule_8: 60px; /* 60px/60px/62px */
+  --font_size_rule_9: 14px; /* 14px/14px/10px */
+  --font_size_rule_10: 40px; /* 40px/30px/25px */
+  --font_size_rule_11: 36px; /* 36px/30px/28px */
+  --font_size_rule_12: 20px; /* 20px/20px/16px */
+
+
+  --line_height_rule_1: 130%; /* 130%/130%/140% */
+  --line_height_rule_2: 100%; /* 100% */
+  --line_height_rule_3: 125%; /* 125%/140%/125% */
+  --line_height_rule_4: 130%; /* 130%/130%/125% */
+  --line_height_rule_5: 130%; /* 130%/130%/125% */
+
+
+
+  --letter-spacing_rule_1: 0.01em; /* 0.01em/0.01em/normal */
+
+  --font_weight_rule_1: 400; /* 400/500/400 */
+  --font_weight_rule_2: 500;
+
+
+  --size_rule_1: 25px; /* 25px/20px/20px */
+
+  --grid_columns: repeat(12, 1fr); /* (12, 1fr)/(8, 1fr)/(4, 1fr) */
+  --grid_gaps: 2.6%; /* 2.6%/2.6%/6% */
+}
+
+@media screen and (max-width: 1920px) {
+  :root {
+    --global_padding_content: 200px;
+    --global_padding: 0;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  :root {
+    --global_padding_content: 100px;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  :root {
+    --global_padding_content: 20px;
+
+    --offset_chapter: 100px; /* 150px/100px/50px */
+    --offset_chapter_sub: 120px; /* 150px/120px/100px */
+
+    --header_height: 64px; /* 75px/64px/56px */
+
+    --font_size_rule_1: 40px; /* 50px/40px/32px */
+    --font_size_rule_2: 60px; /* 75px/60px/48px */
+    --font_size_rule_4: 16px; /* 14px/16px/14px */
+    --font_size_rule_7: 14px; /* 18px/14px/14px */
+    --font_size_rule_10: 30px; /* 40px/30px/25px */
+    --font_size_rule_11: 30px; /* 36px/30px/28px */
+
+    --line_height_rule_3: 140%; /* 125%/140%/125% */
+
+    --font_weight_rule_2: 500; /* 400/500/500 */
+
+    --size_rule_1: 20px; /* 25px/20px/20px */
+
+    --grid_columns: repeat(8, 1fr); /* (12, 1fr)/(8, 1fr)/(4, 1fr) */
+  }
+}
+
+@media screen and (max-width: 740px) {
+  :root {
+    --global_padding_content: 16px;
+
+    --offset_chapter: 50px; /* 150px/100px/50px */
+    --offset_chapter_sub: 100px; /* 150px/120px/100px */
+
+    --header_height: 56px; /* 75px/64px/56px */
+
+    --font_size_rule_1: 32px; /* 50px/40px/32px */
+    --font_size_rule_2: 48px; /* 75px/60px/48px */
+    --font_size_rule_3: 14px; /* 20px/20px/14px */
+    --font_size_rule_4: 14px; /* 14px/16px/14px */
+    --font_size_rule_5: 12px; /* 14px/14px/12px */
+    --font_size_rule_6: 18px; /* 18px/18px/14px */
+    --font_size_rule_8: 62px; /* 60px/60px/62px */
+    --font_size_rule_9: 10px; /* 14px/14px/10px */
+    --font_size_rule_10: 25px; /* 40px/30px/25px */
+    --font_size_rule_11: 28px; /* 36px/30px/28px */
+    --font_size_rule_12: 16px; /* 20px/20px/16px */
+
+
+    --line_height_rule_1: 140%; /* 130%/130%/140% */
+    --line_height_rule_3: 125%; /* 125%/140%/125% */
+    --line_height_rule_4: 125%; /* 130%/130%/125% */
+
+    --letter-spacing_rule_1: normal; /* 0.01em/0.01em/normal */
+
+    --grid_columns: repeat(4, 1fr); /* (12, 1fr)/(8, 1fr)/(4, 1fr) */
+    --grid_gaps: 6%; /* 2.6%/2.6%/6% */
+  }
+}

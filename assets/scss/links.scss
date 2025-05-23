@@ -1,0 +1,67 @@
+@use "variables.scss" as *;
+@use "icons_svg.scss" as *;
+
+@mixin setLink(
+  $c_text: $c_text,
+  $c_text_hover: null,
+  $c_underline: #ffffff00,
+  $c_underline_hover: #ffffff00
+) {
+  color: $c_text;
+  text-decoration: none;
+  cursor: pointer;
+
+  @if ($c_text_hover and $c_underline_hover) {
+    transition: color 200ms ease-in-out, border-color 200ms ease-in-out;
+    border-bottom: 1px solid $c_underline;
+
+    &:hover {
+      border-color: $c_underline_hover;
+      color: $c_text_hover;
+    }
+  } @else if ($c_underline_hover) {
+    transition: border-color 200ms ease-in-out;
+    border-bottom: 1px solid $c_underline;
+    &:hover {
+      border-color: $c_underline_hover;
+    }
+  } @else if($c_text_hover) {
+    transition: color 200ms ease-in-out;
+    &:hover {
+      border-color: $c_text_hover;
+    }
+  }
+
+  @content;
+}
+
+@mixin setLink_primary() {
+  @include setLink($c_orange, null, #ffffff00, $c_orange);
+}
+
+@mixin setLinkIconRight(
+  $icon_svg,
+  $width,
+  $c_text: $c_body,
+  $c_text_hover: null,
+  $c_underline: $c_body,
+  $c_underline_hover: #ffffff00
+) {
+  @include setLink($c_text, $c_text_hover, $c_underline, $c_underline_hover);
+
+  &::after {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: url("data:image/svg+xml;utf8," + $icon_svg);
+    padding-right: $width + px;
+  }
+}
+
+@mixin setLinkExternal {
+  @include setLinkIconRight($i_external, 25);
+}
+
+@mixin setLinkExternal_primary {
+  @include setLinkIconRight(getIconExternal($c_primary), 25, $c_primary, $c_primary, $c_primary);
+}

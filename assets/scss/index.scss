@@ -1,0 +1,198 @@
+// ------------------------------ INIT FONTS (start) ------------------------------
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
+}
+
+/* ---------------------------------- Raleway (start) ---------------------------------- */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Raleway/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  src: url(../fonts/Raleway/Raleway-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  src: url(../fonts/Raleway/Raleway-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/Raleway/Raleway-Bold.ttf);
+}
+
+/* ----------------------------------- Raleway (end) ----------------------------------- */
+
+@font-face {
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("../fonts/TTNormsPro-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("../fonts/TT_Norms_Pro-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ArialMT.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Arial-BoldMT.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "BellotaText";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/BellotaText-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "BellotaText";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/BellotaText-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Inter-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Inter-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NeutralFace";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/NeutralFaceRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NeutralFace";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/NeutralFaceBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/PlayfairDisplay-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/PlayfairDisplay-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/PlayfairDisplay-MediumItalic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/PlayfairDisplay-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/PlayfairDisplay-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/PlayfairDisplay-BoldItalic.woff2") format("woff2");
+}
+
+// ------------------------------ INIT FONTS (end) ------------------------------
+
+// --------------------------- GLOBAL CLASSES (start) ---------------------------
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border-radius: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  scroll-margin-top: calc(var(--header_height) - 2px);
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: $c_body;
+  margin: 0 auto;
+}

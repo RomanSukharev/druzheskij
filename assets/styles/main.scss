@@ -1,0 +1,18 @@
+@mixin setGrid() {
+  display: grid;
+  grid-template-columns: var(--grid-template-column-count);
+  grid-column-gap: var(--gutter);
+  align-items: self-start;
+  grid-template-rows: max-content;
+}
+
+@mixin setUnselectable() {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                   not supported by any browser */
+}

@@ -1,0 +1,143 @@
+@mixin setFontStyle1() {
+  font-family: "NeutralFace";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font_size_rule_1); /* 50px/40px/32px */
+  line-height: var(--line_height_rule_1); /* 130%/130%/140% */
+}
+
+@mixin setFontStyle2() {
+  font-family: "PlayfairDisplay";
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--font_size_rule_2); /* 75px/60px/48px */
+  line-height: var(--line_height_rule_2); /* 90% */
+}
+
+@mixin setFontStyle3() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font_size_rule_3); /* 20px/20px/14px */
+  line-height: var(--line_height_rule_3); /* 125%/140%/125% */
+}
+
+@mixin setFontStyle4() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font_size_rule_4); /* 14px/16px/14px */
+  line-height: 125%;
+}
+
+@mixin setFontStyle5() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--font_size_rule_7); /* 18px/14px/14px */
+  line-height: 150%;
+}
+
+@mixin setFontStyle6() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--font_size_rule_6); /* 18px/18px/14px */
+  line-height: 100%;
+}
+
+@mixin setFontStyle7() {
+  font-family: "NeutralFace";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font_size_rule_8); /* 60px/60px/62px */
+  line-height: 98%;
+}
+
+@mixin setFontStyle8() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font_size_rule_5); /* 14px/14px/12px */
+  line-height: 130%;
+}
+
+@mixin setFontStyle9() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 125%;
+}
+
+@mixin setFontStyle10() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font_size_rule_9); /* 14px/14px/10px */
+  line-height: 138.1%;
+}
+
+@mixin setFontStyle11() {
+  font-family: "NeutralFace";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font_size_rule_1); /* 50px/40px/32px */
+  line-height: var(--line_height_rule_4); /* 130%/130%/125% */
+}
+
+@mixin setFontStyle12() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font_size_rule_3); /* 20px/20px/14px */
+  line-height: 140%;
+}
+
+@mixin setFontStyle13() {
+  font-family: "PlayfairDisplay";
+  font-style: italic;
+  font-weight: 500;
+  font-size: var(--font_size_rule_2); /* 75px/60px/48px */
+  line-height: var(--line_height_rule_2); /* 90% */
+}
+@mixin setFontStyle14() {
+  font-family: "TT Norms Pro";
+  font-style: normal;
+  font-weight: var(--font_weight_rule_2);
+  font-size: var(--font_size_rule_10); /* 40px/30px/25px */
+  line-height: var(--line_height_rule_14); /* 120%/120%/115% */
+}
+
+@mixin setFontStyle14() {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--font_size_rule_11); /* 36px/30px/28px */
+  line-height: 130%;
+}
+
+@mixin setFontStyle15() {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--font_size_rule_12); /* 36px/30px/28px */
+  line-height: 130%;
+}
+
+@mixin setFontStyle16() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+}
+
+@mixin setFontStyle17() {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  // font-size: var(--font_size_rule_5); /* 14px/14px/12px */
+  font-size: 14px;
+  line-height: 125%;
+}

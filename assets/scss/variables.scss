@@ -1,0 +1,160 @@
+// ---------------------------- COLORS (start) ----------------------------
+// $c_text - color text
+
+$c_primary: #FF7060;
+$c_primary_hover: #E37B6F;
+$c_green: #23B732;
+$c_orange: #FB5;
+
+$c_body: #ffffff;
+$c_body_hover: #f6f6f6;
+
+$c_text: #586267; //основной цвет текста
+$c_text_light: #B2B3B3;
+$c_text_hover: #FB5;
+$c_text_2: #A3A29F;
+
+$c_dark: #2e3037;
+$c_dark_hover: #45484d;
+
+$c_border_light: #eee;
+
+$c_negative: #d25858;
+// ---------------------------- COLORS (end) ----------------------------
+
+// --------------------------- MIXINS (start) ---------------------------
+@mixin hideScroll() {
+  -ms-overflow-style: none; /* IE и Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin stretch() {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin setFlexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin setFlexRowCenter($gap) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin setFlexColumn($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin setRulesToRootNodePopup($bg:null) {
+  position: fixed;
+  inset: 0;
+
+  z-index: 6000;
+  @if $bg{
+    background-color: $bg;
+  } @else {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@mixin useUnselectable() {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+@mixin useAnchorLink($offset: 90) {
+  margin-top: -$offset + px;
+  padding-top: $offset + px;
+}
+
+//lcwp - limited content with padding
+@mixin useLCWP() {
+  padding-left: var(--global_padding_content);
+  padding-right: var(--global_padding_content);
+}
+
+@mixin useLC() {
+  padding-left: var(--global_padding);
+  padding-right: var(--global_padding);
+}
+
+@mixin setFullWidthInLCWP() {
+  margin-left: calc(-1 * var(--global_padding_content));
+  width: calc(100% + (2 * var(--global_padding_content)));
+}
+
+//GO - global offset
+@mixin useGO() {
+  padding-left: var(--global_offset);
+  padding-right: var(--global_padding_content);
+}
+
+@mixin setMarginSides($left, $right: null) {
+  margin-left: $left;
+
+  @if ($right) {
+    margin-right: $right;
+  } @else {
+    margin-right: $left;
+  }
+}
+
+@mixin setPaddingSides($left, $right: null) {
+  padding-left: $left;
+
+  @if ($right) {
+    padding-right: $right;
+  } @else {
+    padding-right: $left;
+  }
+}
+
+@mixin setGridLayout() {
+  display: grid;
+  grid-template-columns: var(--grid_columns);
+  gap: 0 var(--grid_gaps);
+}
+
+@mixin setBgSvg($icon_svg, $c_bg) {
+  background-color: $c_bg;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-image: url("data:image/svg+xml;utf8," + $icon_svg);
+}
+
+@mixin setIconLeft($icon_svg, $width, $height) {
+  &::before {
+    content: "";
+    width: $width;
+    height: $height;
+    @include setBgSvg($icon_svg, #00000000);
+  }
+}
+
+@mixin setIconRight($icon_svg, $width, $height) {
+  &::after {
+    content: "";
+    width: $width;
+    height: $height;
+    @include setBgSvg($icon_svg, #00000000);
+  }
+}
+// ---------------------------- MIXINS (end) ----------------------------

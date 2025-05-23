@@ -1,0 +1,158 @@
+@use "variables.scss" as *;
+@use "icons_svg.scss" as *;
+
+@mixin setCommonRulesBtnIcon($icon_svg, $c_bg, $c_bg_hover) {
+  @include setBgSvg($icon_svg, $c_bg);
+  transition: background-color 0.3s ease-in-out;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $c_body_hover;
+  }
+}
+
+// --------------------------------- CLOSE BTNS (start) ---------------------------------
+@mixin setRulesBtnClose($icon_svg, $c_bg, $c_bg_hover) {
+  @include setCommonRulesBtnIcon($icon_svg, $c_bg, $c_bg_hover);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+@mixin setBtnClose() {
+  @include setRulesBtnClose(getIconClose($c_body), #00000000, $c_dark_hover);
+}
+
+@mixin setBtnClose_primary() {
+  @include setRulesBtnClose(getIconClose($c_body), $c_primary, $c_primary_hover);
+}
+
+@mixin setBtnClose_dark() {
+  @include setRulesBtnClose(getIconClose($c_dark), $c_body, $c_body_hover);
+}
+
+@mixin setBtnCloseRound_light() {
+  @include setCommonRulesBtnIcon(getIconClose($c_dark), $c_body, $c_body_hover);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 7px;
+}
+// --------------------------------- CLOSE BTNS (end) ---------------------------------
+
+// ----------------------------- HEADER MENU BTNS (start) -----------------------------
+@mixin setBtnHeaderMenu() {
+  @include setCommonRulesBtnIcon($i_menu, $c_body_hover, $c_dark);
+  width: 24px;
+  height: 24px;
+}
+
+@mixin setBtnHeaderMenuClose {
+  @include setCommonRulesBtnIcon(getIconClose($c_text), $c_text, $c_dark);
+  width: 24px;
+  height: 24px;
+
+}
+// ------------------------------ HEADER MENU BTNS (end) -----------------------------
+
+// ------------------------------ QUESTION BTNS (start) ------------------------------
+@mixin setCommonRulesBtnQuestion(
+  $size,
+  $font_size,
+  $c_bg,
+  $c_bg_hover,
+  $c_text,
+  $c_text_hover,
+  $font_family,
+  $font_weight: 400,
+  $border: none
+) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+
+  border: $border;
+  background: none;
+  background-color: $c_bg;
+
+  transition: background-color 300ms ease-in-out;
+  cursor: pointer;
+
+  &::after {
+    @include setFlexCenter();
+    content: "?";
+
+    height: 100%;
+    width: 100%;
+
+    font-family: $font_family;
+    font-style: normal;
+    font-weight: $font_weight;
+    font-size: $font_size;
+    color: $c_text;
+
+    transition: color 300ms ease-in-out;
+  }
+
+  &:hover {
+    background-color: $c_bg_hover;
+
+    &::after {
+      color: $c_text_hover;
+    }
+  }
+}
+
+@mixin setBtnQuestion() {
+  @include setCommonRulesBtnQuestion(
+    25px,
+    14px,
+    $c_body,
+    $c_body_hover,
+    $c_text,
+    $c_text,
+    "Lab Grotesque"
+  );
+}
+
+@mixin setBtnQuestion_primary() {
+  @include setCommonRulesBtnQuestion(
+    25px,
+    14px,
+    $c_primary,
+    $c_primary_hover,
+    $c_body,
+    $c_body,
+    "Lab Grotesque"
+  );
+}
+
+@mixin setBtnQuestion_dark() {
+  @include setCommonRulesBtnQuestion(
+    var(--size_rule_1),
+    /* 25px/20px/20px */ 14px,
+    $c_text,
+    $c_orange,
+    $c_body,
+    $c_text,
+    "Lab Grotesque",
+    var(--font_weight_rule_2),
+    /* 400/500/500 */ 1px solid $c_body
+  );
+}
+
+@mixin setBtnQuestion_dark2() {
+  @include setCommonRulesBtnQuestion(
+    25px,
+    14px,
+    $c_dark,
+    $c_dark_hover,
+    $c_body,
+    $c_body,
+    "Lab Grotesque"
+  );
+}
+// ------------------------------- QUESTION BTNS (end) -------------------------------

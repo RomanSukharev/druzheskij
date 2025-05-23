@@ -1,0 +1,157 @@
+@use "variables.scss" as *;
+@use "font_styles.scss" as *;
+
+@mixin setCommonRulesBtn($c_text, $c_bg) {
+  color: $c_text;
+  background-color: $c_bg;
+  will-change: transition;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+@mixin setBtn_primary() {
+  @include setCommonRulesBtn($c_body, $c_primary);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0.9186px 14.69767px 0 rgba(255, 112, 96, 0.6);
+  &:not([disabled]):hover {
+    background-color: $c_primary_hover;
+  }
+}
+
+@mixin setBtn_primaryNotShadow() {
+  @include setCommonRulesBtn($c_body, $c_primary);
+  border: none;
+  border-radius: 10px;
+  &:hover {
+    background-color: $c_primary_hover;
+  }
+}
+
+@mixin setBtn_dark() {
+  @include setCommonRulesBtn($c_body, $c_text);
+  border: 1px solid $c_body;
+  border-radius: 10px;
+  &:hover {
+    border-color: $c_primary;
+    background-color: $c_primary;
+  }
+}
+
+@mixin setBtn_lightGray() {
+  @include setCommonRulesBtn($c_text, $c_body_hover);
+  border: none;
+  border-radius: 10px;
+  &:hover {
+    color: $c_body;
+    background-color: $c_primary;
+  }
+}
+
+@mixin setBtn_light() {
+  @include setCommonRulesBtn($c_text, $c_body);
+  border: 1px solid $c_border_light;
+  &:hover {
+    background-color: $c_border_light;
+  }
+}
+
+@mixin setBtn_contrast() {
+  @include setCommonRulesBtn($c_text, $c_body_hover);
+  border: 1px solid $c_text;
+  border-radius: 10px;
+  &:hover {
+    border-color: $c_primary;
+    background-color: $c_primary;
+    color: $c_body;
+  }
+}
+
+@mixin setBtn_contrastBorder() {
+  @include setCommonRulesBtn($c_text, $c_body);
+  border: 1px solid $c_text;
+
+  &:hover {
+    background-color: $c_body_hover;
+    color: $c_text;
+  }
+}
+
+@mixin setBtn_shadow() {
+  @include setCommonRulesBtn($c_text, $c_body);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border: none;
+
+  &:hover {
+    background-color: $c_body_hover;
+  }
+}
+
+@mixin setBtn_shadowActive() {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  color: $c_text;
+  background-color: $c_body_hover;
+  border: none;
+}
+
+// ----------------------------- LINE BTN (start) -----------------------------
+@mixin setCommonRulesLineBtn($color, $color_hover) {
+  position: relative;
+  color: $color;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  transition: color 0.3s ease-in-out;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px dashed $color;
+
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: $color_hover;
+
+    &::after {
+      border-color: #ffffff00;
+    }
+  }
+}
+
+@mixin setLineBtn_primary() {
+  @include setCommonRulesLineBtn($c_primary, $c_primary_hover);
+}
+// ----------------------------- LINE BTN (end) -----------------------------
+
+// ----------------------------- TAB BTN (start) ----------------------------
+@mixin setCommonRulesTabBtn() {
+  padding: 7px 20px;
+  border-radius: 22px;
+
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+@mixin setTabBtn() {
+  @include setCommonRulesTabBtn();
+  @include setBtn_light();
+}
+
+@mixin setTabBtn_active {
+  @include setCommonRulesTabBtn();
+  background-color: $c_body_hover;
+  color: $c_text;
+  border: none;
+}
+// ------------------------------ TAB BTN (end) -----------------------------
